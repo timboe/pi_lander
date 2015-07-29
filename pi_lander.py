@@ -192,7 +192,7 @@ class GameClass:
         self.game_on = False # Game has finished. But did we win or loose?
         # Check if the player looses. This is if the ship's angle is > 20 degrees
         # the ship is not over a landing site, is moving too fast or is off the side of the screen
-        ship_step = int(self.ship.position[0]/self.landscape.step_size)
+        ship_step = int(self.ship.position[0]/LandscapeClass.step_size)
         if self.ship.position[0] <= 0 \
            or self.ship.position[0] >= WIDTH \
            or self.landscape.get_within_landing_spot(ship_step) == False \
@@ -223,8 +223,8 @@ def draw():
 
     # Get the x and y coordinates of each step of the landscape and draw it as a straight line
     for step in range(0, game.landscape.world_steps - 1):
-        x_start = game.landscape.step_size * step
-        x_end   = game.landscape.step_size * (step + 1)
+        x_start = size * step
+        x_end   = size * (step + 1)
         y_start = game.landscape.world_height[step]
         y_end   = game.landscape.world_height[step + 1]
         screen.draw.line( (x_start, y_start), (x_end, y_end), "white" )
