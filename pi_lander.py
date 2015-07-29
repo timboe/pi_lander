@@ -261,7 +261,7 @@ def draw():
     cos_angle = math.cos( math.radians(game.ship.angle + 45) )
     screen.draw.line( game.ship.position, (game.ship.position[0] + (sin_angle*size*3), game.ship.position[1] + (cos_angle*size*3)), "yellow" )
     if game.ship.booster == True:
-        sin_angle = math.sin( math.radians(game.ship.angle) ) # Booster is drawn under at the same angle as the ship, just under it
+        sin_angle = math.sin( math.radians(game.ship.angle) ) # Booster is drawn at the same angle as the ship, just under it
         cos_angle = math.cos( math.radians(game.ship.angle) )
         screen.draw.filled_circle( (game.ship.position[0] + (sin_angle*size*3), game.ship.position[1] + (cos_angle*size*3)), size, "orange" )
 
@@ -277,7 +277,7 @@ def update(detlatime):
     if game.n_frames % game.game_speed == 0: # If n_frames is an exact multiple of the game FPS: so once per second
         game.blink = not game.blink # Invert blink so True becomes False or False becomes True
 
-    # Start the game if the player presses space when the game is not of
+    # Start the game if the player presses space when the game is not on
     if keyboard.SPACE and game.game_on == False:
         game.game_on = True
         game.reset()
