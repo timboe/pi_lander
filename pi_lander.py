@@ -13,7 +13,7 @@ WIDTH = 800 # Screen width
 HEIGHT = 600 # Screen height
 
 class LandingSpotClass:
-    """ Each instance defined a landing spot by where it starts, how big it is and how many points it's worth """
+    """ Each instance defines a landing spot by where it starts, how big it is and how many points it's worth """
     landing_spot_sizes = ["small", "medium", "large"]
     def __init__(self, starting_step):
         self.starting = starting_step
