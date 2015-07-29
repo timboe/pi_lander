@@ -177,7 +177,7 @@ class GameClass:
         self.blink = True # True if blinking text is to be shown
         self.n_frames = 0 # Number of frames processed
         self.game_on = False # True if the game is being played
-        self.game_message = "PI LANDER\nPRESS SPACE TO START" # Start of game message
+        self.game_message = "PI   LANDER\nPRESS SPACE TO START" # Start of game message
         self.ship = ShipClass() # Make a object of the ShipClass type
         self.landscape = LandscapeClass()
         self.reset() # Start the game with a fresh landscape and ship
